@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 16</title>
+    <script src="jQuery.js"></script>
+    <style>
+        .cuadrado{
+            background-color: green;
+            width: 200px;
+            height: 100px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 16</h1>
+    <h2>16. Mejora el ejercicio anterior añadiendo cuatro botones.
+        <br>
+        1. Start. Comienza la animación
+        <br>
+        2. Stop. Parar la animación
+        <br>
+        3. StopAll. Detiene todas las animaciones
+        <br>
+        4. Stop but finish. Detiene las animaciones pero acabando primero la que se encuentra en ejecución</h2>
+    
+    <div class="cuadrado">HELLO</div>
+    <button class="boton">Start</button>
+    <button class="stopBoton">Stop</button>
+    <button class="stopTodo">Parar todo</button>
+    <button class="stopFin">Deja terminar función en ejecución</button>
+
+    <script>
+    $(document).ready(function(){
+        $(".boton").click(function(){
+            var div = $("div");
+            div.animate({
+                left: 100
+            }, 2000);
+            div.animate({fontSize:'3em'});
+        });
+        
+        $(".stopBoton").click(function(){
+            $("div").stop();
+        });
+
+        $(".stopTodo").click(function(){
+            var stopAll = true;
+            $("div").stop(stopAll);
+        });
+
+        $(".stopFin").click(function(){
+            var goToEnd = true;
+            $("div").stop(goToEnd, "true");
+        });
+    });
+    </script>
+</body>
+</html>

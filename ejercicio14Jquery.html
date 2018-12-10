@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 14</title>
+    <script src="jQuery.js"></script>
+    <style>
+        .cuadrado{
+            background-color: green;
+            width: 200px;
+            height: 100px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 14</h1>
+    <h2>14. Crear un programa, tal que al clickar en un botón se mueva un cuadrado 100 px a la derecha y si dentro del cuadrado pone HELLO aumente el tamaño de la letra.</h2>
+    
+    <div class="cuadrado">HELLO</div>
+    <button class="boton">Haz click</button>
+
+    <script>
+    $(document).ready(function(){
+        $(".boton").click(function(){
+            var div = $("div");
+            div.animate({
+                left: 100
+            });
+            div.animate({fontSize:'3em'});
+        });
+    });
+    </script>
+</body>
+</html>

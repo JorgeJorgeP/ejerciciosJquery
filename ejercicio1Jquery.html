@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+    <script src="jQuery.js"></script>
+
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    <h2 class="intro">1. Crear un documento HTML con un encabezado, dos párrafos y un botón. Al pulsar el botón mediante el selector $(“*”) se debe ocultar todo. Método hide()</h2>
+    <p class="intro">1. En el mismo documento HTML anterior. Al pulsar el botón debe ocultarse dicho botón</p>
+    <p>2. En el mismo documento HTML anterior. Suponemos que el encabezado y el primer párrafo tienen el atributo class=”intro”.Deberás ocultar al pulsar el botón, dicho párrafo.</p>
+    <button class="hide-btn">Click</button>
+
+    <script>
+/* Primera parte
+        $(document).ready(function(){
+            $(".hide-btn").click(function(){
+                $("*").hide();
+            });
+        });
+*/
+
+        $(document).ready(function(){
+            $(".hide-btn").click(function(){
+                $(".intro").hide();
+            });
+        });
+
+    </script>
+</body>
+</html>

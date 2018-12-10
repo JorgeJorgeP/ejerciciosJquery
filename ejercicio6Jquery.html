@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 6</title>
+    <script src="jQuery.js"></script>
+
+</head>
+<body>
+    <h1>Ejercicio 6</h1>
+    <h2>6. Crear un documento con un párrafo, el cuál se oculte al clicar dos veces sobre él</h2>
+    <p>Este párrafo se oculta si le das dobleclick</p>
+    
+    <script>
+    $(document).ready(function(){
+        $("p").dblclick(function(){
+            $(this).hide();
+        });
+    });
+    </script>
+</body>
+</html>

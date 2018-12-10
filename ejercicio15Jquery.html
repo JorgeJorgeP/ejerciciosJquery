@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 15</title>
+    <script src="jQuery.js"></script>
+    <style>
+        .cuadrado{
+            background-color: green;
+            width: 200px;
+            height: 100px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 15</h1>
+    <h2>15. En el ejercicio anterior incluir un botón para poder detener el efecto.</h2>
+    
+    <div class="cuadrado">HELLO</div>
+    <button class="boton">Haz click</button>
+    <button class="stopboton">Stop</button>
+
+    <script>
+    $(document).ready(function(){
+        $(".boton").click(function(){
+            var div = $("div");
+            div.animate({
+                left: 100
+            });
+            div.animate({fontSize:'3em'});
+        });
+        
+        $(".stopboton").click(function(){
+            $("div").stop();
+        });
+    });
+    </script>
+</body>
+</html>

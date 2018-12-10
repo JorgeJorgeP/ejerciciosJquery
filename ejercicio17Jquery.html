@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 17</title>
+    <script src="jQuery.js"></script>
+</head>
+<body>
+    <h1>Ejercicio 17</h1>
+    <h2>17. Crear un programa con un botón, tal que al hacer clic ponga las letras en rojo de un párrafo, lo oculte con un desplazamiento hacia arriba (slideUp) y lo visualice con un desplazamiento hacia abajo (slideDown).</h2>
+    
+    <p>Hola Mundo</p>
+    <button class="boton">Start</button>
+    
+    <script>
+    $(document).ready(function(){
+        $(".boton").click(function(){
+            $("p")
+                .css({color: "red"})
+                .slideUp()
+                .slideDown();
+        }); 
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 18</title>
+    <script src="jQuery.js"></script>
+</head>
+<body>
+    <h1>Ejercicio 18</h1>
+    <h2>18. Mediante tres eventos asociados a tres botones, “SetText”, “SetHTML” y “SetValue” establecer el texto de un primer párrafo a “Hola Mundo ”, establecer el texto de un segundo  párrafo a “Hola Mundo” en negrita y establecer el valor de un cuadro de texto a “Hola Mundo”.</h2>
+    
+    <p></p>
+    <p id="dos"></p>
+    <input type="text">
+    <button class="setText">Primer párrafo</button>
+    <button class="setHTML">Segundo párrafo</button>
+    <button class="setValue">Valor cuadro</button>
+    
+    <script>
+    $(document).ready(function(){
+        $(".setText").click(function(){
+            $("p:first").text("Hola Mundo");
+        }); 
+        $(".setHTML").click(function(){
+            $("p[id='dos']").text("Hola Mundo").css("font-weight","bold");
+        }); 
+        $(".setValue").click(function(){
+            $("input").val("Hola Mundo");
+        }); 
+    });
+    </script>
+</body>
+</html>

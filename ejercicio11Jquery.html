@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 11</title>
+    <script src="jQuery.js"></script>
+    <style>
+        div{
+            background-color: beige;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 11</h1>
+    <h2>11. Crea un documento con un botón, tal que al clickarlo como gestor de evento, agrege la opacidad de tres elementos div mediante el método fadeIn(). El primer fadeIn() ejecútalo sin parámetros, el segundo de manera lenta y el tercero en tres milisegundos.</h2>
+    
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+
+    <button>Haz click</button>
+    
+    <script>
+    $(document).ready(function(){
+        $("div").hide();
+        $("button").click(function(){
+           $("#d1").fadeIn();
+           $("#d2").fadeIn("slow");
+           $("#d3").fadeIn(3);
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 4</title>
+    <script src="jQuery.js"></script>
+
+</head>
+<body>
+    <h1>Ejercicio 4</h1>
+    <h2>4. Crea un documento con dos enlaces y dos botones. Uno se tiene que abrir en una nueva ventana (target="_blank") y el otro no. Cada botón debe ocultar uno de los enlaces en función de su atributo target.</h2>
+    <a href="https://www.alicante.es" target="_blank">Web Alicante</a>
+    <a href="https://www.youtube.com" target="_self">Youtube</a>
+ 
+    <button id="boton1">Oculta 1</button>
+    <button id="boton2">Oculta 2</button>
+
+    <script>
+    $(document).ready(function(){
+        $("#boton1").click(function(){
+            $("a[target='_blank']").hide();
+        });
+    });
+
+    $(document).ready(function(){
+        $("#boton2").click(function(){
+            $("a[target='_self']").hide();
+        });
+    });
+    </script>
+</body>
+</html>

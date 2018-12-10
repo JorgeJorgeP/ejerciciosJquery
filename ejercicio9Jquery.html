@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 9</title>
+    <script src="jQuery.js"></script>
+    <style>
+    input{
+        background-color: aqua;
+    }    
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 9</h1>
+    <h2>9. Utiliza los métodos focus() y blur() para cambiar el color de dos cuadros de texto cuando posicionamos el foco y cuando lo retiramos.</h2>
+
+    <input type="text">
+    <input type="text">
+        
+    <script>
+    $(document).ready(function(){
+        $("input").focus(function(){
+            $(this).css("background-color", "red");
+        });
+        $("input").blur(function(){
+            $(this).css("background-color", "blue");
+        });
+    });
+    </script>
+</body>
+</html>

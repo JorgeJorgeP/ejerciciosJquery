@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 19</title>
+    <script src="jQuery.js"></script>
+</head>
+<body>
+    <h1>Ejercicio 19</h1>
+    <h2>19. Cambia los atributos href y title de un enlace a Google, mediante un evento asociado a un botón. Ahora href=”http://www.google.es/intl/es/earth/index.html” y el título será “Google Earth”</h2>
+    
+    <a href="http://www.google.es">Google</a>
+    
+    <button>Haz click</button>
+    
+    <script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("a").text("Google Earth").attr("href","http://www.google.es/intl/es/earth/index.html");
+        }); 
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 7</title>
+    <script src="jQuery.js"></script>
+
+</head>
+<body>
+    <h1>Ejercicio 7</h1>
+    <h2>7. Crear un documento con un párrafo tal que aparezca un aviso alert() cuando se presiona el botón izquierdo del ratón.</h2>
+    <p>Este párrafo te alerta cuando le das click</p>
+    
+    <script>
+    $(document).ready(function(){
+        $("p").click(function(){
+            alert("Hola");
+        });
+    });
+    </script>
+</body>
+</html>

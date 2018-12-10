@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 8</title>
+    <script src="jQuery.js"></script>
+
+</head>
+<body>
+    <h1>Ejercicio 8</h1>
+    <h2>8. Utiliza el método hover() para lanzar un mensaje cuando nos posicionamos sobre un párrafo y otro cuando salgamos de él.</h2>
+    <p>Este párrafo te alerta cuando pasas por encima y cuando te vas.</p>
+    
+    <script>
+    $(document).ready(function(){
+        $("p").hover(function(){
+            alert("Hola");
+        });
+        $("p").mouseleave(function(){
+            alert("Adiós");
+        });
+    });
+    </script>
+</body>
+</html>

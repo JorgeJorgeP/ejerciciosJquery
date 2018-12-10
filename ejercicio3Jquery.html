@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+    <script src="jQuery.js"></script>
+
+</head>
+<body>
+    <h1>Ejercicio 3</h1>
+    <h2>3. Crea un documento con un par de enlaces mediante el atributo href y oculta ambos enlaces.</h2>
+    <a href="https://www.alicante.es">Web Alicante</a>
+    <a href="https://www.youtube.com">Youtube</a>
+    
+    <script>
+    $(document).ready(function(){
+        $("a").click(function(){
+            $(this).hide();
+        });
+    });
+    </script>
+</body>
+</html>
